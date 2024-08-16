@@ -128,7 +128,7 @@ public class DynamoDBRecordHandler
     }
 
     @VisibleForTesting
-    DynamoDBRecordHandler(DynamoDbClient ddbClient, AmazonS3 amazonS3, AWSSecretsManager secretsManager, AmazonAthena athena, String sourceType, java.util.Map<String, String> configOptions)
+    public DynamoDBRecordHandler(DynamoDbClient ddbClient, AmazonS3 amazonS3, AWSSecretsManager secretsManager, AmazonAthena athena, String sourceType, java.util.Map<String, String> configOptions)
     {
         super(amazonS3, secretsManager, athena, sourceType, configOptions);
         this.ddbClient = ddbClient;

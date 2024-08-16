@@ -157,7 +157,7 @@ public class DynamoDBMetadataHandler
     }
 
     @VisibleForTesting
-    DynamoDBMetadataHandler(
+    public DynamoDBMetadataHandler(
             EncryptionKeyFactory keyFactory,
             AWSSecretsManager secretsManager,
             AmazonAthena athena,
