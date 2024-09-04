@@ -57,7 +57,6 @@ import com.amazonaws.athena.connectors.jdbc.manager.JdbcMetadataHandler;
 import com.amazonaws.athena.connectors.jdbc.manager.PreparedStatementBuilder;
 import com.amazonaws.services.athena.AmazonAthena;
 import com.amazonaws.services.secretsmanager.AWSSecretsManager;
-import com.google.common.annotations.VisibleForTesting;
 import com.google.common.base.Strings;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
@@ -136,8 +135,7 @@ public class SnowflakeMetadataHandler extends JdbcMetadataHandler
                 SnowflakeConstants.SNOWFLAKE_DEFAULT_PORT)), configOptions);
     }
 
-    @VisibleForTesting
-    protected SnowflakeMetadataHandler(
+    public SnowflakeMetadataHandler(
         DatabaseConnectionConfig databaseConnectionConfig,
         AWSSecretsManager secretsManager,
         AmazonAthena athena,
